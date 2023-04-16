@@ -4,11 +4,11 @@ var newTaskInput = document.getElementById("task-inkput");
 var todoListContainer = document.getElementById("todo-list");
 
 // Step 2 Write the Behaviour
-function onAddTaskedClicked(event) {
+function onAddTaskClicked(event) {
     var taskName = newTaskInput.value;
     newTaskInput.value = "";
-    todoListContainer.insertAdjacentHTML('afterbegin', taskName);
-
+    var taskHTML = template.replace("<!-- TASK_NAME -->", taskName);
+    todoListContainer.insertAdjacentHTML('beforeend', taskHTML);
 }
 // Step 3 Link to the Event Handler (link the behaviour)
 addTaskButton.addEventListener('click', onAddTaskedClicked);
