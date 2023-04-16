@@ -1,11 +1,11 @@
-// Step 1 Find the element
+//Step 1 Find the element
 var addTaskButton = document.getElementById("add-task");
 var newTaskInput = document.getElementById("task-input");
 var todoListContainer = document.getElementById("todo-list");
-var templateContainer = document.getElementById("list-item-template");
-var template = templateContainer.innerHTML;
+var templateElement = document.getElementById("list-item-template");
+var template = templateElement.innerHTML;
 
-// Step 2 Write the Behaviour
+// Step 2 Write the behaviour
 function onAddTaskClicked(event) {
     var taskName = newTaskInput.value;
     newTaskInput.value = "";
@@ -24,7 +24,8 @@ function onTodolistClicked(event) {
     } else {
         targetElement.classList.remove("completed");
     }
+}
 
-// Step 3 Link to the Event Handler (link the behaviour)
+// Step 3 Link to the event handler (link the behaviour)
 addTaskButton.addEventListener('click', onAddTaskClicked);
 todoListContainer.addEventListener('click', onTodolistClicked);
