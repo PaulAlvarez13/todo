@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>My Todo List</title>
-    <meta name="author" content="PUT YOUR NAME HERE">
-    <meta name="description" content="Use ToDo list app to explore and interact with the DOM">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>My Todo List</title>
+  <meta name="author" content="Paul Alvarez">
+  <meta name="description" content="Use ToDo list app to explore and interact with the DOM">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <h1>My Todo List</h1>
+  <h1>My Todo List</h1>
   <form>
     <label>
       Task Name:
@@ -20,20 +20,19 @@
       Add Task
     </button>
   </form>
-
-  <ul id="todo-list">   
-
+  <ul id="todo-list">
   </ul>
-    <script type="text/template"id="list-item-template">
-      <li>
-        <label>
-          <input type="checkbox">
-          <!-- TASK_NAME -->
-        </label>
-      </li>>
-    </script>
-    
-    <script src="js/script.js"></script>
+
+  <script type="text/template" id="list-item-template">
+    <li class="task">
+      <label>
+        <input class="checkbox" type="checkbox">
+        <!-- TASK_NAME -->
+      </label>
+    </li>
+  </script>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
